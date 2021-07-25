@@ -26,16 +26,21 @@
             <img src="{{ listing.photo_main.url }}" alt="" class="img-main img-fluid mb-3">
             <!-- Thumbnails -->
             <div class="row mb-5 thumbs">
-                <div class="col-md-2">
-                    <a href="{{ listing.photo_1.url }}" data-lightbox="home-images">
-                        <img src="{{ listing.photo_1.url }}" alt="" class="img-fluid">
-                    </a>
-                </div>
-                <div class="col-md-2">
-                    <a href="{{ listing.photo_2.url }}" data-lightbox="home-images">
-                        <img src="{{ listing.photo_2.url }}" alt="" class="img-fluid">
-                    </a>
-                </div>
+                {% if listing.photo_1 %}
+                    <div class="col-md-2">
+                        <a href="{{ listing.photo_1.url }}" data-lightbox="home-images">
+                            <img src="{{ listing.photo_1.url }}" alt="" class="img-fluid">
+                        </a>
+                    </div>
+                {% endif %}
+                {% if listing.photo_2 %}
+                    <div class="col-md-2">
+                        <a href="{{ listing.photo_2.url }}" data-lightbox="home-images">
+                            <img src="{{ listing.photo_2.url }}" alt="" class="img-fluid">
+                        </a>
+                    </div>
+                {% endif %}
+
                 <div class="col-md-2">
                
                 </div>
